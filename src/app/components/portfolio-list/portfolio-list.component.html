@@ -1,1 +1,6 @@
-<p *ngFor="let port of portfolios$ | async ">{{port.title}}</p>
+<p *ngFor="let port of portfolios$ | async ">
+  <span>{{port.title}}</span>
+  <span>{{port.author}}</span>
+  <span>{{port.url}}</span>
+  <span>{{port.primaryLanguage}}</span>
+</p>

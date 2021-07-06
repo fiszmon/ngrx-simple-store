@@ -1,1 +1,21 @@
-<p>portfolio-form works!</p>
+<form [formGroup]="form" (ngSubmit)="addPortfolio()">
+  <label>
+    Title
+    <input type="text" formControlName="title">
+  </label>
+  <label>
+    Author
+    <input type="text" formControlName="author">
+  </label>
+  <label>
+    url
+    <input type="text" formControlName="url">
+  </label>
+  <label>
+    Primary language
+    <input type="text" formControlName="primaryLanguage">
+  </label>
+  <div>
+    <button type="submit" [disabled]="form.invalid">Add</button>
+  </div>
+</form>

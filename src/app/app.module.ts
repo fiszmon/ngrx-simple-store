@@ -7,6 +7,7 @@ import {PortfolioFormComponent} from './components/portfolio-form/portfolio-form
 import {StoreModule} from '@ngrx/store';
 import {portfolioReducer} from './reducers/portfolio.reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {ReactiveFormsModule} from '@angular/forms';
 // import {routerReducer} from '@ngrx/router-store';
 
 @NgModule({
@@ -24,6 +25,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
     }),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
