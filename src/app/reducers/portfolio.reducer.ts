@@ -1,5 +1,5 @@
 import {Portfolio} from '../models/portfolio';
-import {Actions, ADD_PORTFOLIO} from '../actions/portfolio.actions';
+import {Actions, ADD_PORTFOLIO, DELETE_PORTFOLIO} from '../actions/portfolio.actions';
 import {createFeatureSelector, createSelector} from '@ngrx/store';
 
 
@@ -16,6 +16,8 @@ export function portfolioReducer(state: Portfolio[] = [initialState], action: Ac
   switch (action.type) {
     case ADD_PORTFOLIO:
       return [...state, action.payload];
+    case DELETE_PORTFOLIO:
+      return state.filter(p => p !== action.payload);
     default:
       return state;
   }
